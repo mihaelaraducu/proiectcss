@@ -471,6 +471,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 768px) {
+  #header h1.logo{
+    display: none;
+  }
   #hero {
     height: 100vh;
   }
