@@ -1,5 +1,6 @@
 :root{
-  --colorPrim: #9201ea; 
+  --colorPrim: rgb(53, 51, 205);
+  --gradientPrim: linear-gradient(90deg, #000000, #3533cd);
   --bgWhite: #ffffff;
 }
 
@@ -116,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: var(--colorPrim);
+  background: var(--gradientPrim);
   height: 40px;
   font-size: 14px;
   transition: all 0.5s;
@@ -397,13 +398,22 @@ h1, h2, h3, h4, h5, h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
+  position: relative;
   width: 100%;
   height: 75vh;
-  background: url("../img/hero-bg.jpg") top left;
-  background-size: cover;
-  position: relative;
+  overflow: hidden;
 }
-#hero:before {
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+/*#hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.4);
   position: absolute;
@@ -411,9 +421,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   right: 0;
-}
+} */
 #hero .container {
   position: relative;
+  z-index: 1;
 }
 #hero h1 {
   margin: 0;
