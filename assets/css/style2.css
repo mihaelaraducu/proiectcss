@@ -4,8 +4,94 @@
 :root{
   --mycolor: rgb(53, 51, 205);
   --gradientPrim: linear-gradient(90deg, #000000, #3533cd);
-  --mybackground: rgba(16, 110, 234, 0.8);;
+  --mybackground: rgba(16, 110, 234, 0.8);
+  --bgWhite: #ffffff;
 }
+
+/* ===== Dark Mode ===== */
+[data-theme="dark"] {
+  --colorPrim: #529eef;
+  --gradientPrim: linear-gradient(90deg, #222, #111);
+  --bgWhite: #121212;
+  background-color: var(--bgWhite);
+  color: #ffffff;
+  --mycolor: white;
+}
+
+
+/* Start Buton Dark Mode */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-left: 20px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  width: 50px;
+  height: 25px;
+  background: #f1f6febf;
+  position: relative;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #1f3b8b;
+  border-radius: 50%;
+  top: 2.5px;
+  left: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Iconițele */
+.slider i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.bi-brightness-high-fill {
+  left: 6px;
+  color: white; /* Soarele este alb pe light */
+}
+
+.bi-moon-fill {
+  right: 4px;
+  color: grey; /* Luna este gri pe light */
+}
+
+/* DARK MODE */
+input:checked + .slider {
+  background: black;
+}
+
+input:checked + .slider::before {
+  transform: translateX(25px);
+}
+
+/* Schimbarea culorilor iconițelor */
+input:checked + .slider .bi-brightness-high-fill {
+  color: grey; /* Soarele devine gri */
+}
+
+input:checked + .slider .bi-moon-fill {
+  color: white; /* Luna devine albă */
+}
+/* End Buton Dark Mode */
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
