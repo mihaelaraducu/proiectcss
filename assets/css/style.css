@@ -1,17 +1,9 @@
-:root{
+:root {
   --colorPrim: rgb(53, 51, 205);
   --gradientPrim: linear-gradient(90deg, #000000, #3533cd);
   --bgWhite: #ffffff;
 }
 
-/* Dark Mode */
-.dark{
-  --colorPrim: #529eef;
-  --colorPrim: rgb(53, 51, 205);
-  --gradientPrim: linear-gradient(90deg, #000000, #3533cd);
-  --bgWhite: #ffffff;
-
-}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
