@@ -9,14 +9,14 @@
 }
 
 /* ===== Dark Mode ===== */
-[data-theme="dark"] {
+/*[data-theme="dark"] {
   --colorPrim: #529eef;
   --gradientPrim: linear-gradient(90deg, #222, #111);
   --bgWhite: #121212;
   background-color: var(--bgWhite);
   color: #ffffff;
   --mycolor: white;
-}
+}*/
 
 
 /* Start Buton Dark Mode */
