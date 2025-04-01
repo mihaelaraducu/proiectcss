@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 :root{
-  --mycolor: rgb(53, 51, 205);
+  --colorPrim: rgb(53, 51, 205);
   --gradientPrim: linear-gradient(90deg, #000000, #3533cd);
   --mybackground: rgba(16, 110, 234, 0.8);
   --bgWhite: #ffffff;
